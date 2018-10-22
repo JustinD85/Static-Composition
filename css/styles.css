@@ -1,0 +1,54 @@
+*{
+    margin:0;
+}
+.grid-container *{
+    box-sizing:border-box;
+    border: 1px lightgrey solid;
+}
+
+.grid-container{
+    display:grid;
+    grid-template-columns: 100px 2fr 1fr;
+    grid-template-rows: .5fr 1fr 2fr 4fr;
+    grid-template-areas: 
+        "nav search search"
+            "nav header header"
+            "nav charts charts"
+            "nav main   aside";
+    height:100vh;
+    width:100vw;
+}
+
+header{
+    grid-area: search;
+    background:peachpuff;
+    /*   height:10%; */
+}
+
+nav{
+    grid-area: nav;
+    background: moccasin;
+} 
+
+.page-header{
+    grid-area: header;
+    background: lemonchiffon;
+}
+
+.charts{
+    
+    grid-area:charts;
+    background: papayawhip;
+}
+
+main{
+    grid-area:main;
+    background: palegoldenrod;
+}
+aside{
+    grid-area:aside;
+    background: khaki;
+}
+
+
+
