@@ -31,7 +31,7 @@ button{
 
 aside{
     grid-area:aside;
-    background: khaki;
+    background: #ecf2f6;
 }
 
 h1{
@@ -70,17 +70,31 @@ main{
     grid-template-rows: repeat(9,1fr);
     padding: 5%;
 }
+main :nth-child(n+1){
+    display: grid;
+    align-items: center;
+    padding-left: 30px;
+    font-weight: bold;
+}
 main :nth-child(n+1):nth-child(-n+2) {
     background:#6d7e97;
+    color: #fff;
 }
 main :nth-child(n+3){
+    background: #ffffff;
     border-bottom: lightgrey solid 2px;
+}
+ #char-count{
+    max-width: 75ch;
+    background: #ffffff;
+    color:#9b9fa4;
+    padding: 10px 0;
 }
 nav{
     grid-area: nav;
     background: #364052;
     display: grid;
-    padding-top: 15%;
+    grid-template-rows: minmax(50px, 120px) repeat(2, minmax(50px, 200px));
 }
 
 ul{
@@ -258,12 +272,15 @@ ul li{
 
 .border-grey{
     border:solid grey 1px;
-    border-radius: 50%;
+    border-radius: 20px;
     padding:10px;
     margin-left:.5%;
 }
 .border-grey i{
     text-align: center;
+}
+.border-grey .fa-circle{
+    color:green;
 }
 .border-grey:hover {
     background:blue;
@@ -369,8 +386,7 @@ circle {
     background: #ecf2f6;
     display: grid;
     grid-template-columns: 1fr .8fr;
-    /* align-items: center; */
-    border-bottom: grey solid 1px;
+    border-bottom: lightgrey solid 1px;
 }
 .charts article,
 .charts button{
@@ -380,6 +396,17 @@ circle {
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
+    margin-bottom: 1%;
+}
+.btn-1{
+    width:200px;
+    border-radius: 10px;
+    height: 2rem;
+}
+.btn-2{
+    width:120px;
+    border-radius: 10px;
+    height: 2rem;
 }
   .graph-text{
       margin-top: 5%;
@@ -399,3 +426,46 @@ circle {
       height: 135px;
       width:345px;
   }
+
+  aside{
+      padding: 5%;
+  }
+  .social-buttons {
+      width: 85%;
+      height: 70px;
+      margin: 20px;
+      color: #fff; 
+      border-radius: 15px;
+      text-align: center;
+      padding-top: 25px;
+  }
+  .fb{
+    background: #5171BC;
+  }
+  .tw{
+    background: #00aaee;
+  }
+  .linkn{
+    background: #0881bd;
+  }
+  h1{
+      font-weight: bold;
+  }
+  h1 i{
+    font-size: 2rem;
+    margin-right: 10px;
+  }
+  aside input{
+      height:2.5rem;
+      width:45%;
+  }
+aside .copy-button{
+  background-color: #67B8BF;
+  border: none;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+  height:2.5rem;
+  margin-left: 0;
+}
