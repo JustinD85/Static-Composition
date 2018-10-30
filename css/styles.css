@@ -24,6 +24,11 @@ body{
     width:100%;
 }
 
+button{
+    width:100px;
+    margin-left: 15%;
+}
+
 aside{
     grid-area:aside;
     background: khaki;
@@ -38,7 +43,7 @@ header {
     background:#fff;
     display:grid;
     grid-template-columns: minmax(50px, 4vw) 1fr repeat(3, minmax(50px, 4vw));
-    grid-template-rows: minmax(50px, 4vw);
+    /* grid-template-rows: minmax(50px, 3vw); */
 }
 
 header *{
@@ -59,9 +64,18 @@ input[type=checkbox]{
 
 main{
     grid-area:main;
-    background: palegoldenrod;
+    background: #ecf2f6;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: repeat(9,1fr);
+    padding: 5%;
 }
-
+main :nth-child(n+1):nth-child(-n+2) {
+    background:#6d7e97;
+}
+main :nth-child(n+3){
+    border-bottom: lightgrey solid 2px;
+}
 nav{
     grid-area: nav;
     background: #364052;
@@ -81,14 +95,13 @@ ul li{
 .grid-container{
     display:grid;
     grid-template-columns: minmax(150px, 6vw) 2fr 1fr;
-    grid-template-rows:  minmax(50px, 4vw) 1fr 2fr 4fr;
+    grid-template-rows:  minmax(50px, 4vw) .5fr .5fr 8fr;
     grid-template-areas:
         "nav search search"
         "nav header header"
         "nav charts charts"
         "nav main   aside";
-        height:100vh; 
-        width:100vw;
+        height:100vh;
 }
 
 .fa{
@@ -148,11 +161,6 @@ ul li{
 .blue-border li:hover {
     color:white;
     border-left: blue 3px solid;
-}
-
-.charts{
-    grid-area:charts;
-    background: papayawhip;
 }
 
 .checkbox{
@@ -285,7 +293,109 @@ ul li{
     margin-right: 4%;
     padding-bottom: .8%;
 }
+
 .tabs li:hover{
     border-bottom: solid #00afff 3px;
     cursor: pointer;
+    font-weight: bold;
 }
+
+svg{
+    transform: rotate(90deg);
+    position:relative;
+    margin: 0 50px;
+  }
+
+circle {
+    fill: none;
+    stroke-width: 6;
+    stroke-linecap: round;
+}
+
+.shadow{
+    fill:none;
+    stroke: #d7e4e8;
+}
+.c1{
+    animation:rotatec1 2s ease-in;
+    stroke: #00b9c2;
+    stroke-dashoffset: 200;
+    stroke-dasharray: 260;
+  }
+  
+  @keyframes rotatec1 {
+    0% {
+      stroke-dashoffset: 260;
+    }
+    100% {
+      stroke-dashoffset: 200;
+    }
+  }
+  
+  .c2{
+    animation:rotatec2 2s ease-in;
+    stroke:#00a7fb;
+    stroke-dashoffset: 200;
+    stroke-dasharray: 300;
+  }
+  
+  @keyframes rotatec2 {
+    0% {
+      stroke-dashoffset: 300;
+    }
+    100% {
+      stroke-dashoffset: 200;
+    }
+  }
+  
+  .c3{
+    animation:rotatec3 2s ease-in;
+    stroke:#af60ab;
+    stroke-dashoffset: 200;
+    stroke-dasharray: 340;
+  }
+  
+  @keyframes rotatec3 {
+    0% {
+      stroke-dashoffset: 340;
+    }
+    100% {
+      stroke-dashoffset: 200;
+    }
+  }
+
+  .charts{
+    grid-area:charts;
+    background: #ecf2f6;
+    display: grid;
+    grid-template-columns: 1fr .8fr;
+    /* align-items: center; */
+    border-bottom: grey solid 1px;
+}
+.charts article,
+.charts button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+  .graph-text{
+      margin-top: 5%;
+      position:relative;
+      display: inline-block;
+  }
+  .graph-text span{
+      display: grid;
+      text-align: center;
+      position: relative;
+      bottom:35px;
+  }
+
+  .the-chart{
+      border:none;
+      border-radius: 0;
+      height: 135px;
+      width:345px;
+  }
