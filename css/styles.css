@@ -1,21 +1,36 @@
 *{
     margin:0;
+    padding:0;
     color:#9b9fa4;
     font-family: 'Open Sans', 'Font Awesome\ 5 Free', sans-serif;
+    font-size: 13px;
     box-sizing:border-box;
+    
+}
+a{
+    color:#5ac8e8;
+    text-decoration: none;
+    margin-left: 1%;
 }
 
-.grid-container{
-    display:grid;
-    grid-template-columns: minmax(100px, 6vw) 2fr 1fr;
-    grid-template-rows:  minmax(50px, 4vw) 1fr 2fr 4fr;
-    grid-template-areas:
-        "nav search search"
-            "nav header header"
-            "nav charts charts"
-            "nav main   aside";
-    height:100vh;
-    width:100vw;
+a::before{
+    content: '\f0c1';
+    font-size: .7rem;
+    font-weight: 600;
+    margin-right: 2px;
+}
+body{
+    height: 100%;
+    width:100%;
+}
+
+aside{
+    grid-area:aside;
+    background: khaki;
+}
+
+h1{
+    font-size: 1.8rem;
 }
 
 header {
@@ -32,6 +47,50 @@ header *{
     border-top: none;
 }
 
+img{
+    height:70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+input[type=checkbox]{
+    visibility: hidden;
+}
+
+main{
+    grid-area:main;
+    background: palegoldenrod;
+}
+
+nav{
+    grid-area: nav;
+    background: #364052;
+    display: grid;
+    padding-top: 15%;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li{
+    margin-top: 8%;
+    padding-left: 7px;
+}
+
+.grid-container{
+    display:grid;
+    grid-template-columns: minmax(150px, 6vw) 2fr 1fr;
+    grid-template-rows:  minmax(50px, 4vw) 1fr 2fr 4fr;
+    grid-template-areas:
+        "nav search search"
+        "nav header header"
+        "nav charts charts"
+        "nav main   aside";
+        height:100vh; 
+        width:100vw;
+}
+
 .fa{
     border:none;
 }
@@ -43,16 +102,19 @@ header *{
 .fa-bars{
     margin-left: 2px;
 }
+
 .search-box{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.search-box:hover {
+
+.search-box:hover  {
     background:#00a4ff;
     color: #fff;
     cursor: pointer;
 }
+
 .search-box:hover * {
     color:#fff;
 }
@@ -63,16 +125,29 @@ header *{
     color: #d2d3d8;
 }
 
-nav{
-    grid-area: nav;
-    background: #364052;
-    display: grid;
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .bt-border{
     box-shadow: 0px 1px 0 0 #2e374a;
     border-bottom: 1px #2e374a solid;
     border-radius: 3px;
+    padding-top: 8%;
+}
+
+.bt-border ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blue-border li:hover {
+    color:white;
+    border-left: blue 3px solid;
 }
 
 .charts{
@@ -80,19 +155,137 @@ nav{
     background: papayawhip;
 }
 
+.checkbox{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    position: relative;
+    border-radius: 3px;
+    border:none;
+}
+
+.checkbox label {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+
+    transition: all .5s ease;
+    cursor: pointer;
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+
+    background: black;
+}
+
+.yellow {
+    background: yellow;
+}
+
+.yellow::before{
+    content:'Administrative';
+    display: inline-block;
+    padding-left: 130%;
+}
+
+.yellow input[type=checkbox]:checked + label {
+    background: yellow;
+}
+
+.blue {
+    background: blue;
+}
+
+.blue::before{
+    content:'Design';
+    display: inline-block;
+    padding-left: 130%;
+}
+
+.blue input[type=checkbox]:checked + label {
+    background: blue;
+}
+
+.red {
+    background: red;
+}
+
+.red::before{
+    content:'Executive';
+    display: inline-block;
+    padding-left: 130%;
+}
+
+.red input[type=checkbox]:checked + label {
+    background: red;
+}
+
+.green {
+    background: green;
+}
+
+.green::before{
+    content:'Human Resources';
+    display: inline-block;
+    padding-left: 130%;
+}
+
+.green input[type=checkbox]:checked + label {
+    background: green;
+}
+
 .page-header{
     grid-area: header;
-    background: lemonchiffon;
+    background: #fff;
+    padding: 2% 4% 0 4%;
 }
 
-
-
-main{
-    grid-area:main;
-    background: palegoldenrod;
+.header-btns{
+    display:inline-block;
+    width:50%;
+    text-align: right;
 }
 
-aside{
-    grid-area:aside;
-    background: khaki;
+.border-grey{
+    border:solid grey 1px;
+    border-radius: 50%;
+    padding:10px;
+    margin-left:.5%;
+}
+.border-grey i{
+    text-align: center;
+}
+.border-grey:hover {
+    background:blue;
+    color:white;
+    border: white 1px ;
+}
+.border-grey:hover *{
+    color:white;
+}
+
+.inline-block li{
+    list-style: none;
+    display: inline;
+}
+
+.title{
+    display: inline-block;
+    width:49%;
+}
+
+.tabs{
+    margin-top: 2%;
+    padding-bottom: 1%;
+}
+
+.tabs li{
+    margin-right: 4%;
+    padding-bottom: .8%;
+}
+.tabs li:hover{
+    border-bottom: solid #00afff 3px;
+    cursor: pointer;
 }
