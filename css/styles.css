@@ -3,6 +3,7 @@
   color: #9b9fa4;
   font-family: 'Open Sans', 'Font Awesome\ 5 Free', sans-serif;
   font-size: 13px;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -99,7 +100,9 @@ nav {
   background: #364052;
   display: grid;
   grid-area: nav;
-  grid-template-rows: minmax(50px, 120px) repeat(2, minmax(50px, 200px));
+  grid-template-rows: minmax(50px, 120px) repeat(2, minmax(50px, 220px));
+  padding-top: 5%;
+  padding-left: 6%;
 }
 
 ul {
@@ -107,7 +110,7 @@ ul {
 }
 
 ul li {
-  margin-top: 8%;
+  margin-top: 11%;
   padding-left: 7px;
 }
 
@@ -194,15 +197,15 @@ ul li {
 
 .checkbox label {
   background: black;
-  bottom: 2px;
+  bottom: 5px;
   border-radius: 50%;
   cursor: pointer;
   display: inline-block;
-  height: 16px;
+  height: 8px;
   position: absolute;
-  right: 2px;
+  right: 6px;
   transition: all .5s ease;
-  width: 16px;
+  width: 8px;
 }
 
 .yellow {
@@ -333,7 +336,7 @@ svg {
 
 circle {
   fill: none;
-  stroke-width: 6;
+  stroke-width: 10;
   stroke-linecap: round;
 }
 
@@ -431,10 +434,15 @@ circle {
 }
 
 .graph-text span {
-  bottom: 35px;
+  bottom: 55px;
   display: grid;
   position: relative;
   text-align: center;
+}
+
+.big-num {
+  font-weight: bolder;
+  font-size: 2rem;
 }
 
 .the-chart {
