@@ -175,6 +175,9 @@ ul li{
     color:white;
     border-left: blue 3px solid;
 }
+.blue-border li i{
+    padding-right: 9px;
+}
 
 .checkbox{
     display: inline-block;
