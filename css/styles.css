@@ -79,7 +79,12 @@ main :nth-child(n+1) {
   padding-left: 30px;
 }
 
-main :nth-child(n+1):nth-child(-n+2) {
+main :nth-child(1) {
+  background: #6d7e97;
+  color: #fff;
+}
+
+main :nth-child(2) {
   background: #6d7e97;
   color: #fff;
 }
@@ -542,6 +547,12 @@ aside .copy-button {
     content: '...';
     padding-left: 10px;
   }
+}
+
+.description .fa-sad-cry {
+  font-size: 2rem;
+  background: white;
+  color: peru;
 }
 
 @media screen and (max-width:720px) {
