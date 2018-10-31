@@ -6,7 +6,7 @@ Original image:
 ![original-static-comp](https://user-images.githubusercontent.com/18714169/47766843-7e7b1200-dc96-11e8-8341-4b0c8eca7543.jpg)
 
 My version:
-![screencapture-127-0-0-1-5500-jd-comp-challenge-2-index-html-2018-10-30-23_08_43](https://user-images.githubusercontent.com/18714169/47767331-c8fd8e00-dc98-11e8-84c5-c6676dff2b66.png)
+![screencapture-127-0-0-1-5500-jd-comp-challenge-2-index-html-2018-10-30-23_11_33](https://user-images.githubusercontent.com/18714169/47767427-30b3d900-dc99-11e8-86d6-9c5300437247.png)
 ## Built With
 * HTML
 * CSS
