@@ -336,7 +336,7 @@ svg {
 
 circle {
   fill: none;
-  stroke-width: 6;
+  stroke-width: 10;
   stroke-linecap: round;
 }
 
@@ -434,10 +434,15 @@ circle {
 }
 
 .graph-text span {
-  bottom: 35px;
+  bottom: 55px;
   display: grid;
   position: relative;
   text-align: center;
+}
+
+.big-num {
+  font-weight: bolder;
+  font-size: 2rem;
 }
 
 .the-chart {
