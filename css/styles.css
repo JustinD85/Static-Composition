@@ -43,7 +43,6 @@ header {
     background:#fff;
     display:grid;
     grid-template-columns: minmax(50px, 4vw) 1fr repeat(3, minmax(50px, 4vw));
-    /* grid-template-rows: minmax(50px, 3vw); */
 }
 
 header *{
@@ -468,4 +467,84 @@ aside .copy-button{
   margin-bottom: 30px;
   height:2.5rem;
   margin-left: 0;
+}
+
+@media  screen and (max-width:1100px){
+    .grid-container{
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            " search search"
+            " header header"
+            " charts charts"
+            " main   aside";
+    }
+    nav{
+        display: none;
+    }
+}
+
+    @media  screen and (max-width:890px){
+        .grid-container{
+            grid-template-areas:
+                " search search"
+                " header header"
+                " charts charts"
+                " main   main"
+                "aside aside";
+        }
+
+        .btn-2,
+        .btn-1{
+            /* display none doesn't work, idk why */
+            width:0;
+            height: 0;
+            visibility: hidden;
+        }
+        .charts{
+            display: block;
+        }
+        .graph-text{
+            display:block;
+        }
+        .tabs :nth-child(n+7){
+            display: none;
+        }
+        .tabs :nth-child(6)::after{
+            content:'...';
+            padding-left: 10px;
+        }
+    }
+
+    @media  screen and (max-width:720px){
+        .tabs :nth-child(6){
+            display: none;
+        }
+        .tabs :nth-child(5)::after{
+            content:'...';
+            padding-left: 10px;
+        }
+    .charts article{
+        display: block;
+        text-align: center;
+    }        
+    .header-btns{
+        display: block;
+        margin: 30px 0;
+        margin-right: 100px;
+        width:60%;
+    }
+
+}
+@media  screen and (max-width:720px){
+    .tabs :nth-child(n+4){
+        display: none;
+    }
+    .tabs :nth-child(3)::after{
+        content:'...';
+        padding-left: 10px;
+    }
+    aside{
+        display:flex;
+        flex-direction: column;
+    }
 }
